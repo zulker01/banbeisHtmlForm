@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  
 <title>Page Title</title>
 <style>
 
@@ -27,12 +35,18 @@
 </head>
 <body>
 
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
   
 <h3 style="text-align: center;"><nobr><b>Bangladesh Bureau of Educational Information and Statistics (BANBEIS )</b></nobr></h3>
  <p style="text-align: center;">
    Ministry of Education <br>
    1 Sonargaon Road( Palashi-Nilkeht), dhaka -1205<br>
-   .......
+   Email: info@banbeis.gov.bd; Website: www.banbeis.gov.bd
   </p>
   
   <h4 style="text-align: center;"><nobr><b>Student Information Form 2017</b></nobr></h3>
@@ -45,7 +59,26 @@
       <b>1.Personal Information </b>
     </p>
     <div class = "row">
-      <div class = "column">
+      <!--
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+      -->
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="studentName"></label>*Student's Name</label>
+        <input type="text" class="form-control" id="studentName">
+      </div>
+      <div class="form-group col-md-6 col-lg-6">
+        <label for="studentType">Student Type:</label>
+        <select name="studentType">
+          <option value="general">General</option>
+          <option value="ssc(voc)">SSC(VOC)</option>
+          <option value="hsc(voc)">HSC(VOC)</option>
+          <option value="hsc(bm)">HSC(BM)</option>
+        </select>
+      </div>
+     <!-- <div class = "column">
         *Student's Name : <input type = "text" name = "studentName" />
         *Father's Name : <input type = "text" name = "fatherName" />
         *Mother's Name : <input type = "text" name = "motherName" />
@@ -54,15 +87,30 @@
         </div>
       <div class = "column">
         Student Type :
-        <select name="studentType">
-    <option value="general">General</option>
-    <option value="ssc(voc)">SSC(VOC)</option>
-    <option value="hsc(voc)">HSC(VOC)</option>
-    <option value="hsc(bm)">HSC(BM)</option>
-  </select>
+        
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="fatherName"></label>*Father's Name</label>
+        <input type="text" class="form-control" id="fatherName">
+      </div>
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="fatherOccupation"></label>Father's occupation</label>
+        <input type="text" class="form-control" id="fatherOccupation">
       </div>
     </div>
-      </form>
+    <div class="row">
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="motherName"></label>*Mother's Name</label>
+        <input type="text" class="form-control" id="motherName">
+      </div>
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="motherOccupation"></label>Mother's occupation</label>
+        <input type="text" class="form-control" id="motherOccupation">
+      </div>
+    </div>
+      <!--</form>
       <div class ="contianer">
           <div class = "row">
               <div class = "col-md-4 col-sm-6">
@@ -81,6 +129,7 @@
           </div>
         </div>
       </div>
+    -->
      <!-- <form>
         <div class="form-row">
           <div class="form-group col-lg-6">
