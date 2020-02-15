@@ -22,10 +22,10 @@
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
@@ -35,13 +35,12 @@
 </head>
 <body>
 
-  <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
-  
+<div class="m-5 p-2">  
 <h3 style="text-align: center;"><nobr><b>Bangladesh Bureau of Educational Information and Statistics (BANBEIS )</b></nobr></h3>
  <p style="text-align: center;">
    Ministry of Education <br>
@@ -51,100 +50,110 @@
   
   <h4 style="text-align: center;"><nobr><b>Student Information Form 2017</b></nobr></h3>
   <form >
-         <b>Institution EIIN :</b> <input type = "text" name = "institution_eiin" />
+    <nobr><b>Photo :</b>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile01"
+            aria-describedby="inputGroupFileAddon01">
+          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+        </div>
+        <div class="contianer">
+      </div  class="row">
+      <div class="form-group col-md-4 col-lg-4 ">
+        <label for="st_inst_eiin"></label>Institution EIIN :</label>
+         <input type = "text" name = "institution_eiin" />
+      </div>
+      <div class="form-group col-md-4 col-lg-4 ">
+        <label for="st_id"></label>Student ID :</label>
+        <input type = "text" name = "studentId" />
+      </div>
+      <div class="form-group col-md-4 col-lg-4 ">
+        <label for="crvs"></label>CRVS/UID ( for official use ):</label>
+        <input type = "text" name = "crvs" />
+      </div>
+    </div>
+         
        
-    <b> Student ID :( </b>for official use <b>)</b> <input type = "text" name = "studentId" />
-     <b> CRVS/UID:( </b>for official use <b>)</b> <input type = "text" name = "crvs" />
+    
+     
     <p>
       <b>1.Personal Information </b>
     </p>
     <div class ="contianer">
     <div class = "row">
-      <!--
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-      -->
+     
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="studentName"></label>*Student's Name</label>
-        <input type="text" class="form-control" id="studentName">
+        <label for="st_name"></label>*Student's Name</label>
+        <input type="text" class="form-control" id="st_name">
       </div>
       <div class="form-group col-md-6 col-lg-6">
-        <label for="studentType">Student Type:</label>
-        <select name="studentType">
+        <label for="st_type">Student Type:</label>
+        <select name="st_type">
           <option value="general">General</option>
           <option value="ssc(voc)">SSC(VOC)</option>
           <option value="hsc(voc)">HSC(VOC)</option>
           <option value="hsc(bm)">HSC(BM)</option>
         </select>
       </div>
-     <!-- <div class = "column">
-        *Student's Name : <input type = "text" name = "studentName" />
-        *Father's Name : <input type = "text" name = "fatherName" />
-        *Mother's Name : <input type = "text" name = "motherName" />
-        *Father's NID card No : <input type = "number" name = "fatherNidNo" />
-        *Date of Birth (DoB) : <input type = "date" placeholder="dd-mm-yyyy"name = "studentsName" />
-        </div>
-      <div class = "column">
-        Student Type :
-        
-      </div> -->
+     
     </div>
     <div class="row">
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="fatherName"></label>*Father's Name</label>
-        <input type="text" class="form-control" id="fatherName">
+        <label for="st_f_name"></label>*Father's Name</label>
+        <input type="text" class="form-control" id="st_f_name">
       </div>
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="fatherOccupation"></label>Father's occupation</label>
-        <input type="text" class="form-control" id="fatherOccupation">
+        <label for="st_f_occu"></label>Father's occupation</label>
+        <input type="text" class="form-control" id="st_f_occu">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="motherName"></label>*Mother's Name</label>
-        <input type="text" class="form-control" id="motherName">
+        <label for="st_m_name"></label>*Mother's Name</label>
+        <input type="text" class="form-control" id="st_m_name">
       </div>
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="motherOccupation"></label>Mother's occupation</label>
-        <input type="text" class="form-control" id="motherOccupation">
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-group col-md-6 col-lg-6 ">
-        <label for="fatherNidNo"></label>Father's NID/Smart Card No.</label>
-        <input type="number" class="form-control" id="fatherNidNo">
-      </div>
-      <div class="form-group col-md-6 col-lg-6 ">
-        <label for="motherNidNo"></label>Mother's NID/Smart card No.</label>
-        <input type="number" class="form-control" id="motherOccupation">
+        <label for="st_m_occu"></label>Mother's occupation</label>
+        <input type="text" class="form-control" id="st_m_occu">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="fatherMobile"></label>Father's Mobile No.</label>
-        <input type="number" class="form-control" id="fatherMoblie">
+        <label for="st_f_nid"></label>Father's NID/Smart Card No.</label>
+        <input type="number" class="form-control" id="st_f_nid">
       </div>
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="motherMoblie"></label>Mother's Mobile No.</label>
-        <input type="number" class="form-control" id="motherOccupation">
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-group col-md-6 col-lg-6 ">
-        <label for="dateOfBirth"></label>*Date of Birth(DOB):</label>
-        <input type="date" class="form-control" id="dateOfBirth">
-      </div>
-      <div class="form-group col-md-6 col-lg-6 ">
-        <label for="age"></label>Age</label>
-        <input type="number" class="form-control" id="age">
+        <label for="st_m_nid"></label>Mother's NID/Smart card No.</label>
+        <input type="number" class="form-control" id="st_m_nid">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="gender"></label>Gender</label>
-        <select name="gender">
+        <label for="st_f_mobile"></label>Father's Mobile No.</label>
+        <input type="number" class="form-control" id="st_f_mobile">
+      </div>
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="st_m_mobile"></label>Mother's Mobile No.</label>
+        <input type="number" class="form-control" id="st_m_mobile">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="st_dob"></label>*Date of Birth(DOB):</label>
+        <input type="date" class="form-control" id="st_dob">
+      </div>
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="st_age"></label>Age</label>
+        <input type="number" class="form-control" id="st_age">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6 col-lg-6 ">
+        <label for="st_gender"></label>Gender</label>
+        <select name="st_gender">
           <option value="male">Male</option>
           <option value="Female">Female</option>
           <option value="Other">Other</option>
@@ -152,8 +161,8 @@
         </select>
       </div>
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="bloodGroup"></label>Blood Group</label>
-        <select name="bloodGroup">
+        <label for="st_bloodGroup"></label>Blood Group</label>
+        <select name="st_bloodGroup">
           <option value="a+">A+</option>
           <option value="b+">B+</option>
           <option value="ab+">AB+</option>
@@ -167,25 +176,25 @@
     </div>
     <div class="row">
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="studentMaritalStatus"></label>*Student's Marital Status:</label>
-        <select name="studentMaritalStatus">
+        <label for="st_maritalStatus"></label>*Student's Marital Status:</label>
+        <select name="st_aritalStatus">
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
       </div>
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="religion"></label>Religion</label>
-        <input type="text" class="form-control" id="religion">
+        <label for="st_religion"></label>Religion</label>
+        <input type="text" class="form-control" id="st_religion">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="studentEmail"></label>*Student's Email:</label>
-        <input type="text" class="form-control" id="studentEmail">
+        <label for="st_Email"></label>*Student's Email:</label>
+        <input type="text" class="form-control" id="st_Email">
       </div>
       <div class="form-group col-md-6 col-lg-6 ">
-        <label for="income"></label>Annual Income of Gurdian/Father & Mother (TK): </label>
-        <input type="number" class="form-control" id="income">
+        <label for="st_income"></label>Annual Income of Gurdian/Father & Mother (TK): </label>
+        <input type="number" class="form-control" id="st_income">
       </div>
     </div>
     <p>
@@ -193,30 +202,30 @@
     </p>
     <div class="row">
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="division"></label>*Division:</label>
-        <input type="text" class="form-control" id="division">
+        <label for="st_pr_division"></label>*Division:</label>
+        <input type="text" class="form-control" id="st_pr_division">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="district"></label>District: </label>
-        <input type="number" class="form-control" id="district">
+        <label for="st_pr_district"></label>District: </label>
+        <input type="text" class="form-control" id="st_pr_district">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="thana"></label>Upazilla/Thana: </label>
-        <input type="number" class="form-control" id="thana">
+        <label for="st_pr_upazilla"></label>Upazilla/Thana: </label>
+        <input type="text" class="form-control" id="st_pr_upazilla">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="union"></label>Union/Ward :</label>
-        <input type="text" class="form-control" id="union">
+        <label for="st_pr_union"></label>Union/Ward :</label>
+        <input type="text" class="form-control" id="st_pr_union">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="postOffice"></label>District: </label>
-        <input type="number" class="form-control" id="district">
+        <label for="st_pr_postOffice"></label>Post Office: </label>
+        <input type="text" class="form-control" id="st_pr_postOffice">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="postCode"></label>Upazilla/Thana: </label>
-        <input type="number" class="form-control" id="thana">
+        <label for="st_pr_postCodeint"></label>Post Code: </label>
+        <input type="number" class="form-control" id="st_pr_postCodeint">
       </div>
     </div>
     <p>
@@ -224,30 +233,30 @@
     </p>
     <div class="row">
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="division"></label>*Division:</label>
-        <input type="text" class="form-control" id="division">
+        <label for="st_pm_division"></label>*Division:</label>
+        <input type="text" class="form-control" id="st_pm_division">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="district"></label>District: </label>
-        <input type="number" class="form-control" id="district">
+        <label for="st_pm_district"></label>District: </label>
+        <input type="text" class="form-control" id="st_pm_district">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="thana"></label>Upazilla/Thana: </label>
-        <input type="number" class="form-control" id="thana">
+        <label for="st_pm_upzilla"></label>Upazilla/Thana: </label>
+        <input type="text" class="form-control" id="st_pm_upazilla">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="union"></label>Union/Ward :</label>
-        <input type="text" class="form-control" id="union">
+        <label for="st_pm_union"></label>Union/Ward :</label>
+        <input type="text" class="form-control" id="st_pm_union">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="postOffice"></label>District: </label>
-        <input type="number" class="form-control" id="district">
+        <label for="st_pm_postOffice"></label>Post Office: </label>
+        <input type="text" class="form-control" id="st_pm_postOffice">
       </div>
       <div class="form-group col-md-4 col-lg-4 ">
-        <label for="postCode"></label>Upazilla/Thana: </label>
-        <input type="number" class="form-control" id="thana">
+        <label for="st_pm_postCodeint"></label>Post Code: </label>
+        <input type="number" class="form-control" id="st_pm_postCodeint">
       </div>
     </div>
     <p>
@@ -255,103 +264,85 @@
     </p>
       <div class="row">
         <div class="form-group col-md-4 col-lg-4 ">
-          <label for="class"></label>Class :</label>
-          <input type="text" class="form-control" id="class">
+          <label for="st_class"></label>Class :</label>
+          <input type="text" class="form-control" id="st_class">
         </div>
         <div class="form-group col-md-4 col-lg-4 ">
-          <label for="section"></label>Section: </label>
-          <input type="number" class="form-control" id="section">
+          <label for="st_section"></label>Section: </label>
+          <input type="text" class="form-control" id="st_section">
         </div>
         <div class="form-group col-md-4 col-lg-4 ">
-          <label for="shift"></label>Shift: </label>
-          <input type="number" class="form-control" id="shift">
+          <label for="st_shift"></label>Shift: </label>
+          <input type="text" class="form-control" id="st_shift">
         </div>
       </div>
       <div class="row">
         <div class="form-group col-md-4 col-lg-4 ">
-          <label for="group"></label>Group :</label>
-          <input type="text" class="form-control" id="group">
+          <label for="st_group"></label>Group :</label>
+          <input type="text" class="form-control" id="st_group">
         </div>
         <div class="form-group col-md-4 col-lg-4 ">
-          <label for="session"></label>Session: </label>
-          <input type="number" class="form-control" id="session">
+          <label for="st_session"></label>Session: </label>
+          <input type="text" class="form-control" id="st_session">
         </div>
         <div class="form-group col-md-4 col-lg-4 ">
-          <label for="rollNo"></label>Roll No : </label>
-          <input type="number" class="form-control" id="rollNo">
+          <label for="st_rollNo"></label>Roll No : </label>
+          <input type="text" class="form-control" id="st_rollNo">
         </div>
       </div>
       <p>
         <b>5.Previous Academic Information (if applicable) :</b>
       </p>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">SI No.</th>
+              <th scope="col">Name of the Exam/Degree</th>
+              <th scope="col">Registration</th>
+              <th scope="col">Name of The Institution</th>
+              <th scope="col">Grade/Division</th>
+              <th scope="col">Year of Passing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td> <input type="text" class="form-control" id="stu_exam_name1"></td>
+              <td><input type="text" class="form-control" id="stu_reg1"></td>
+              <td><input type="text" class="form-control" id="stu_institution_name1"></td>
+              <td><input type="text" class="form-control" id="stu_grade1"></td>
+              <td><input type="text" class="form-control" id="stu_yearofpass1"></td>
+            </tr>
+            
+            <tr>
+              <th scope="row">2</th>
+              <td> <input type="text" class="form-control" id="stu_exam_name2"></td>
+              <td><input type="text" class="form-control" id="stu_reg2"></td>
+              <td><input type="text" class="form-control" id="stu_institution_name2"></td>
+              <td><input type="text" class="form-control" id="stu_grade2"></td>
+              <td><input type="text" class="form-control" id="stu_yearofpass2"></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td> <input type="text" class="form-control" id="stu_exam_name3"></td>
+              <td><input type="text" class="form-control" id="stu_reg3"></td>
+              <td><input type="text" class="form-control" id="stu_institution_name3"></td>
+              <td><input type="text" class="form-control" id="stu_grade3"></td>
+              <td><input type="text" class="form-control" id="stu_yearofpass3"></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td> <input type="text" class="form-control" id="stu_exam_name4"></td>
+              <td><input type="text" class="form-control" id="stu_reg4"></td>
+              <td><input type="text" class="form-control" id="stu_institution_name4"></td>
+              <td><input type="text" class="form-control" id="stu_grade4"></td>
+              <td><input type="text" class="form-control" id="stu_yearofpass4"></td>
+            </tr>
+        </div>
     
   </div>
-      <!--</form>
-      <div class ="contianer">
-          <div class = "row">
-              <div class = "col-md-4 col-sm-6">
-                 University of 
-              </div>
-              <div class = "col-md-4 col-sm-6">
-                dhaka
-            </div>
-          </div>
-          <div class = "row">
-            <div class = "col-lg-6">
-                dept
-            </div>
-            <div class = "col-lg-6">
-              of cse
-          </div>
-        </div>
-      </div>
-    -->
-     <!-- <form>
-        <div class="form-row">
-          <div class="form-group col-lg-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-lg-6">
-            <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </form> -->
-    
+      
+</div>
 </body>
 </html> 
