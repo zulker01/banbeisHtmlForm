@@ -41,15 +41,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
 <div class="m-5 p-2">  
-<h3 style="text-align: center;"><nobr><b>Bangladesh Bureau of Educational Information and Statistics (BANBEIS )</b></nobr></h3>
- <p style="text-align: center;">
-   Ministry of Education <br>
-   1 Sonargaon Road( Palashi-Nilkeht), dhaka -1205<br>
-   Email: info@banbeis.gov.bd; Website: www.banbeis.gov.bd
-  </p>
+
   
-  <h4 style="text-align: center;"><nobr><b>Student Information Form 2017</b></nobr></h3>
+  
   <form >
+    <div class="row">
+    <div class="form-group col-md-4 col-lg-4 ">
+      <label for="st_id"></label>Student ID :</label>
+      <input type = "text" name = "studentId" />
+    </div>
+  </div>
     <nobr><b>Photo :</b>
       <div class="input-group">
         <div class="input-group-prepend">
@@ -60,26 +61,20 @@
             aria-describedby="inputGroupFileAddon01">
           <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
         </div>
-        <div class="contianer">
-      </div  class="row">
-      <div class="form-group col-md-4 col-lg-4 ">
-        <label for="st_inst_eiin"></label>Institution EIIN :</label>
-         <input type = "text" name = "institution_eiin" />
-      </div>
-      <div class="form-group col-md-4 col-lg-4 ">
-        <label for="st_id"></label>Student ID :</label>
-        <input type = "text" name = "studentId" />
-      </div>
-      <div class="form-group col-md-4 col-lg-4 ">
-        <label for="crvs"></label>CRVS/UID ( for official use ):</label>
-        <input type = "text" name = "crvs" />
-      </div>
-    </div>
+        
+      </div  >
+      
+      
+      
+      
+    
+    
          
        
     
      
     <p>
+      <br>
       <b>1.Personal Information </b>
     </p>
     <div class ="contianer">
@@ -192,10 +187,7 @@
         <label for="st_Email"></label>*Student's Email:</label>
         <input type="text" class="form-control" id="st_Email">
       </div>
-      <div class="form-group col-md-6 col-lg-6 ">
-        <label for="st_income"></label>Annual Income of Gurdian/Father & Mother (TK): </label>
-        <input type="number" class="form-control" id="st_income">
-      </div>
+     
     </div>
     <p>
       <b>2. Present Address </b>
